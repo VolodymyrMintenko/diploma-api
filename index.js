@@ -26,9 +26,12 @@ function createServer() {
 
   // Allow CORS in development mode
   app.use((req, res, next) => {
-    res.set("Access-Control-Allow-Origin", "*");
-    res.set("Access-Control-Allow-Headers", "*");
-    res.set("Access-Control-Allow-Methods", "PUT, POST, GET, DELETE, OPTIONS");
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Headers", "*");
+    res.header(
+      "Access-Control-Allow-Methods",
+      "PUT, POST, GET, DELETE, OPTIONS"
+    );
     next();
   });
 
