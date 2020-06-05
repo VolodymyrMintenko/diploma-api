@@ -25,15 +25,6 @@ function createServer() {
   const app = express();
 
   // Allow CORS in development mode
-  app.use((req, res, next) => {
-    res.header("Access-Control-Allow-Origin", "*");
-    res.header("Access-Control-Allow-Headers", "*");
-    res.header(
-      "Access-Control-Allow-Methods",
-      "PUT, POST, GET, DELETE, OPTIONS"
-    );
-    next();
-  });
 
   app.use(bodyParser.urlencoded({ extended: true }));
   app.use(express.json());
