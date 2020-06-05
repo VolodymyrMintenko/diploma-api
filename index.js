@@ -3,7 +3,7 @@ const dotenv = require("dotenv");
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 const path = require("path");
-
+var cors = require("cors");
 const authRoute = require("./routes/auth");
 const campaignsRoute = require("./routes/campaigns");
 
@@ -47,7 +47,7 @@ function createServer() {
 }
 
 const app = express();
-
+app.use(cors());
 let broadcaster;
 
 const http = require("http");
