@@ -37,7 +37,6 @@ function createServer() {
   app.listen(port, () => console.log(`Serving on http://localhost:${port}`));
 }
 
-const app = express();
 app.use(cors());
 let broadcaster;
 
