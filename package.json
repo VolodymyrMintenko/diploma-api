@@ -1,5 +1,5 @@
 {
-  "name": "dnd-hub-api",
+  "name": "api",
   "version": "1.0.0",
   "description": "D&D Hub RESTfull API",
   "main": "index.js",
