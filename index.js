@@ -6,11 +6,11 @@ const path = require("path");
 const cors = require("cors");
 const authRoute = require("./routes/auth");
 const campaignsRoute = require("./routes/campaigns");
+const usersRoute = require("./routes/users");
 
 dotenv.config({
   path: path.join(__dirname, `.env`),
 });
-
 // Connect to DB
 mongoose.connect(
   process.env.DB_CONNECT,
@@ -30,7 +30,8 @@ function createServer() {
   // Route Middlewares
   app.use("/auth", authRoute);
   app.use("/campaigns", campaignsRoute);
-
+  app.use("/users", usersRoute);
+  app.use("/articles", require("./routes/api/articles"));
   const port = process.env.PORT || 5000;
   app.listen(port, () => console.log(`Serving on http://localhost:${port}`));
 
