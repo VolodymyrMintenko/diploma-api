@@ -1,13 +1,13 @@
 {
   "name": "api",
   "version": "1.0.0",
-  "description": "D&D Hub RESTfull API",
+  "description": "Diploma",
   "main": "index.js",
   "scripts": {
     "start": "npx nodemon index.js",
     "serve": "node index.js"
   },
-  "author": "lavieennoir",
+  "author": "Mintenko Volodymyr",
   "license": "MIT",
   "devDependencies": {
     "nodemon": "^2.0.2"
